@@ -22,14 +22,33 @@ function fetchData() {
             b["All Skill Badges & Games Completed"]);
         return val;
       }
-      // sorting
-     information = information.sort(sortby);
 
-      information = information.filter(
-        (prod) =>
-          prod["Access Code Redemption Status"] == "Yes" ||
-          prod["User Name"] == "Sahil Ansari"
-      );
+// Sort by number of skill badges completed (descending) and then by User Name (ascending)
+information = information.sort((a, b) => {
+  const badgesA = a["# of Skill Badges Completed"];
+  const badgesB = b["# of Skill Badges Completed"];
+  
+  // First, compare the number of badges
+  if (badgesB !== badgesA) {
+    return badgesB - badgesA; // Sort by badges in descending order
+  }
+
+  // If badges are equal, compare User Names
+  const nameA = a["User Name"].toLowerCase();
+  const nameB = b["User Name"].toLowerCase();
+  
+  if (nameA < nameB) return -1; // nameA comes before nameB
+  if (nameA > nameB) return 1;  // nameA comes after nameB
+  return 0; // names are equal
+});
+
+// Filter the information
+information = information.filter(
+  (prod) =>
+    prod["Access Code Redemption Status"] === "Yes" ||
+    prod["User Name"] === "Sahil Ansari"
+);
+
 
       console.log(information);
 
