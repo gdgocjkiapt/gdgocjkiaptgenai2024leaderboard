@@ -32,15 +32,15 @@ information = information.sort((a, b) => {
   const badgesA = a["# of Skill Badges Completed"];
   const badgesB = b["# of Skill Badges Completed"];
   
-  // First, compare Arcade Games Completed
-  if (arcadeGamesB !== arcadeGamesA) {
-    return arcadeGamesB - arcadeGamesA; // Sort by arcade games in descending order
-  }
-
   // If Arcade Games are equal, compare Skill Badges
   if (badgesB !== badgesA) {
     return badgesB - badgesA; // Sort by skill badges in descending order
   }
+
+// First, compare Arcade Games Completed
+  if (arcadeGamesB !== arcadeGamesA) {
+    return arcadeGamesB - arcadeGamesA; // Sort by arcade games in descending order
+  }
 
   // If both Arcade Games and Skill Badges are equal, compare User Names
   const nameA = a["User Name"].toLowerCase();
