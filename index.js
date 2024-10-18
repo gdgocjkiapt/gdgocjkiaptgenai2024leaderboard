@@ -24,16 +24,25 @@ function fetchData() {
       }
 
 // Sort by number of skill badges completed (descending) and then by User Name (ascending)
+// Sort by Arcade Games Completed, then by Skill Badges Completed, and then by User Name
 information = information.sort((a, b) => {
+  const arcadeGamesA = a["# of Arcade Games Completed"];
+  const arcadeGamesB = b["# of Arcade Games Completed"];
+  
   const badgesA = a["# of Skill Badges Completed"];
   const badgesB = b["# of Skill Badges Completed"];
   
-  // First, compare the number of badges
-  if (badgesB !== badgesA) {
-    return badgesB - badgesA; // Sort by badges in descending order
+  // First, compare Arcade Games Completed
+  if (arcadeGamesB !== arcadeGamesA) {
+    return arcadeGamesB - arcadeGamesA; // Sort by arcade games in descending order
   }
 
-  // If badges are equal, compare User Names
+  // If Arcade Games are equal, compare Skill Badges
+  if (badgesB !== badgesA) {
+    return badgesB - badgesA; // Sort by skill badges in descending order
+  }
+
+  // If both Arcade Games and Skill Badges are equal, compare User Names
   const nameA = a["User Name"].toLowerCase();
   const nameB = b["User Name"].toLowerCase();
   
@@ -46,8 +55,10 @@ information = information.sort((a, b) => {
 information = information.filter(
   (prod) =>
     prod["Access Code Redemption Status"] === "Yes" ||
-    prod["User Name"] === "Sahil Ansari"
+    prod["User Name"] === "Sahil Ansari" ||
+    prod["All Skill Badges & Games Completed(Yes)"] === "Yes"
 );
+
 
 
       console.log(information);
