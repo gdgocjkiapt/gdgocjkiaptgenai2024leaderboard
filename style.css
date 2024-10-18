@@ -18,20 +18,20 @@ h2 {
 }
 
 .searchBox {
-  width: 90%; /* Set the width of the searchBox */
-  margin: 20px auto; /* Center the searchBox horizontally */
+  width: 90%; 
+  margin: 20px auto; 
   height: 150px;
   border-radius: 57px;
   box-shadow: 14px 14px 28px #bcbcbc, -14px -14px 28px #ffffff;
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center the form horizontally */
-  align-items: center; /* Center the form vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 #searchForm {
-  width: 90%; /* Set the width of the form to 90% of the searchBox */
-  display: flex; /* Use flexbox for form elements */
-  gap: 0.2rem; /* Space between input and button */
+  width: 90%; 
+  display: flex; 
+  gap: 0.2rem; 
 }
 
 #searchInput,
