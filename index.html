@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> GDG On Campus JKIAPT | GenAi Study Jam 2024 Leaderboard </title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <img class="centre" src="./images/gdgoc .png"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> GDG On Campus JKIAPT | GenAi Study Jam 2024 Leaderboard </title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="heading">
+    <img class="centre" src="./images/gdgoc .png" />
 
     <div id="header">
       <h1>
@@ -17,28 +28,33 @@
       <h2>
         Leaderboard
       </h2>
-      <form id="searchForm"> 
-        <input type="text" id="searchInput" name="searchInput" placeholder="Enter your Name"/>
-        <button type="submit" value="Search" id="searchButton">Search</button>
-      </form>
     </div>
+  </div>
 
-    <div id="table-container">
-      <table id="Leaderboardtable" class="styled-table">
-        <thead>
-          <tr>
-            <th>Serial Number</th>
-            <th>User Name</th>
-            <th>Access Code Redemption Status</th>
-            <th># of Skill Badges Completed</th>
-            <th># of Arcade Games Completed</th>
-            <th>All Skill Badges & Games Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+  <div class="searchBox">
+    <form id="searchForm">
+      <input type="text" id="searchInput" name="searchInput" placeholder="Enter your Name" />
+      <button type="submit" value="Search" id="searchButton">Search</button>
+    </form>
+  </div>
+
+  <div id="table-container">
+    <table id="Leaderboardtable" class="styled-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>User Name</th>
+          <th>Access Code Redemption Status</th>
+          <th># of Skill Badges Completed</th>
+          <th># of Arcade Games Completed</th>
+          <th>All Skill Badges & Games Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </div>
   <script src="index.js"></script>
-</head>
+  </head>
+
 </html>
