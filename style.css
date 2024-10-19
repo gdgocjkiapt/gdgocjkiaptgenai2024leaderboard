@@ -13,7 +13,7 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
+.Heading {
   font-size: 3rem;
 }
 
@@ -29,7 +29,7 @@ h2 {
 }
 
 #searchForm {
-  width: 90%; 
+  width: 60%; 
   display: flex; 
   gap: 0.2rem; 
 }
@@ -38,12 +38,30 @@ h2 {
 #searchButton {
   padding: 10px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #searchInput {
   border: 1px solid black;
-  width: 100%;
+  width: 80%;
+}
+
+.time {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button an inline block */
+  font-size: 20px; /* Increase font size */
+  margin: 10px 2px; /* Add margin */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.time:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 
 #searchButton {
