@@ -59,6 +59,19 @@ information = information.filter(
     prod["All Skill Badges & Games Completed(Yes)"] === "Yes"
 );
 
+// Initialize total completions variable
+let totalCompletions = 0;
+
+// Count total completions where "All Skill Badges & Games Completed" is "Yes"
+information.forEach((student) => {
+  if (student["All Skill Badges & Games Completed"] === "Yes") {
+    totalCompletions++;
+  }
+});
+
+// Display the total completions in the HTML
+document.getElementById("totalCompletions").textContent = `Total Completions: ${totalCompletions}`;
+
 
 
       console.log(information);
