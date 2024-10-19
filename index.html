@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> GDG On Campus JKIAPT | GenAi Study Jam 2024 Leaderboard </title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <img class="centre" src="./images/gdgoc .png"/>
 
-    <div id="header">
-      <h1>
-        Google GenAi Study Jam 2024
-      </h1>
-      <h2>
-        Leaderboard
-      </h2>
-      <form id="searchForm"> 
-        <input type="text" id="searchInput" name="searchInput" placeholder="Enter your Name"/>
-        <button type="submit" value="Search" id="searchButton">Search</button>
-      </form>
-    </div>
-
-    <div id="table-container">
-      <table id="Leaderboardtable" class="styled-table">
-        <thead>
-          <tr>
-            <th>Serial Number</th>
-            <th>User Name</th>
-            <th>Access Code Redemption Status</th>
-            <th># of Skill Badges Completed</th>
-            <th># of Arcade Games Completed</th>
-            <th>All Skill Badges & Games Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-  </div>
-  <script src="index.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDG On Campus JKIAPT | GenAi Study Jam 2024 Leaderboard</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
+<body>
+  <div id="header">
+    <img class="centre" src="./images/gdgoc .png" alt="Logo" />
+    <h1>Google GenAi Study Jam 2024</h1>
+    <h2>Leaderboard</h2>
+  </div>
+
+  <div class="searchBox">
+    <form id="searchForm">
+      <input type="text" id="searchInput" name="searchInput" placeholder="Enter your Name" />
+      <button type="submit" value="Search" id="searchButton">Search</button>
+    </form>
+
+    <div class="time">
+      <p>Update Time : <span>10:00 AM 18th Oct 2024</span></p>
+    </div>
+  </div>
+<h2 align="centre"
+  <div id="totalCompletions">Total Completions: 0</div>
+</h2>
+
+  <div id="table-container">
+    <table id="Leaderboardtable" class="styled-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>User Name</th>
+          <th>Access Code Redemption Status</th>
+          <th>No. of Skill Badges Completed</th>
+          <th>No. of Arcade Games Completed</th>
+          <th>All Skill Badges & Games Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+
 </html>
