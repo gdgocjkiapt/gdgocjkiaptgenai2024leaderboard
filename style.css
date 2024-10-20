@@ -11,33 +11,39 @@ body {
 
 h1 {
   font-size: 4rem;
+  text-align: center;
 }
 
-.Heading {
+h2 {
   font-size: 3rem;
+  text-align: center;
 }
 
 .searchBox {
   width: 90%; 
-  margin: 20px auto; 
-  height: 150px;
-  border-radius: 57px;
-  box-shadow: 14px 14px 28px #bcbcbc, -14px -14px 28px #ffffff;
+  margin: 20px auto;
+  height: auto;
+  text-align: center;
+  display: flex;
+  font-size: 20px;
+  border-radius: 30px;
+ /* box-shadow: 14px 14px 28px #bcbcbc, -14px -14px 28px #ffffff; */
   display: flex; 
   justify-content: center; 
-  align-items: center; 
+  align-items: center;
 }
 
 #searchForm {
   width: 60%; 
   display: flex; 
-  gap: 0.2rem; 
+  gap: 0.3rem; 
+  border-radius: 30px;
 }
 
 #searchInput,
 #searchButton {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 20px;
 }
 
@@ -47,21 +53,20 @@ h1 {
 }
 
 .time {
-  background-color: #4CAF50; /* Green background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 10px 20px; /* Some padding */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the button an inline block */
-  font-size: 20px; /* Increase font size */
-  margin: 10px 2px; /* Add margin */
-  cursor: pointer; /* Add a pointer on hover */
-  border-radius: 5px; /* Rounded corners */
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 2px 6px;
+  text-align: center;
+  display: flex;
+  font-size: 20px;
+  margin: 10px 0.3px;
+  cursor: pointer;
+  border-radius: 30px;
 }
 
 .time:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #45a049;
 }
 
 #searchButton {
@@ -71,47 +76,40 @@ h1 {
   cursor: pointer;
 }
 
-#header,
-#table-container,
-.centre {
+#header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto;
-  padding: 50px 1.5rem;
+  margin: 20px auto; 
+  padding: 20px; 
   width: 90%;
-  border-radius: 57px;
-  box-shadow: 14px 14px 28px #bcbcbc, -14px -14px 28px #ffffff;
 }
 
-.centre{
-  width: 30%;
-  margin-right: 20px;
+.centre {
+  max-width: 40%; 
+  height: auto; 
 }
 
-#header{
-  text-align: center;
-  justify-content: center;
-  font-family: 'roboto', 'sans-serif';
+.completions {
+  text-align: center; 
+  margin: 20px auto; 
+  font-size: 2rem; 
+  color: #333; 
+}
+
+#totalCompletions {
+  font-weight: bold; 
+  color: #4CAF50; 
 }
 
 #table-container {
   overflow-x: auto;
   width: 90%;
+  margin: 20px auto; 
 }
 
-#Leaderboardtable{
+#Leaderboardtable {
   padding: 5% 5%;
-}
-
-.heading{
-  display: flex;
-  width: 90%;
-  margin: 0px auto;
-}
-
-img {
-  max-width: 100%;
 }
 
 table {
@@ -139,7 +137,7 @@ th {
   font-size: 0.9em;
   font-family: sans-serif;
   border-radius: 5px;
-  box-shadow: 1 1 20px rgba(0, 0, 0, 0.15);
+/*  box-shadow: 1 1 20px rgba(0, 0, 0, 0.15); */
 }
 
 .styled-table thead tr {
@@ -167,7 +165,8 @@ th {
     font-size: 1.5rem;
   }
   #searchForm {
-    width: 100%;
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; 
   }
   th, td {
     padding: 0.5rem; 
@@ -179,6 +178,9 @@ th {
     display: block; 
     overflow-x: auto; 
   }
+  .time {
+    display: none; /* Hide the time button on mobile */
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -188,11 +190,52 @@ th {
   h2 {
     font-size: 2.5rem;
   }
+  .time {
+    display: none; /* Hide the time button on mobile */
+  }
 }
 
 @media screen and (max-width: 992px) {
   #leaderboard {
     border: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .centre {
+    width: 100%; 
+    margin-right: 0; 
+  }
+  #searchBox {
+    flex-direction: column; 
+    align-items: center; /* Center align the contents */
+    width: 100%; /* Full width for the search box */
+    display: flex; /* Ensure it uses flexbox */
+  }
+  #searchForm {
+    width: 80%; /* Adjust the form width for mobile */
+    display: flex; 
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center align inputs */
+  }
+  #searchInput,
+  #searchButton {
+    width: 100%; /* Full width for input and button */
+    font-size: 14px; 
+    padding: 8px; /* Adjust padding for a smaller search bar */
+    margin: 5px 0; /* Add margin for spacing */
+  }
+  #searchInput {
+    font-size: 12px; 
+  }
+  #searchButton {
+    font-size: 12px; 
+  }
+  th, td {
+    padding: 0.3rem; 
+  }
+  .time {
+    display: none; /* Hide the time button on mobile */
   }
 }
 
